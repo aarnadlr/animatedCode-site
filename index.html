@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- META TAG FOR GMAIL BUSINESS VERIF -->
+  <meta name="google-site-verification" content="19NqO6bxG2RGpe_x1YGlxKcjHRcYBpgA_w0FoVSauvE" />
+  <title>ARsocialstudio</title>
+
+  <!-- GOOGLE FONTS CSS (REMOTE) -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet"> -->
+  <!-- FONT AWESOME CSS (LOCAL)  -->
+  <!-- <link rel="stylesheet" href="assets/css/fontawesome/css/font-awesome.min.css"> -->
+	<!-- BOOTSTRAP CSS (LOCAL)    -->
+  <!-- <link rel="stylesheet" href="assets/css/bootstrap.min.css"> -->
+	<!-- BOOTSTRAP CSS (REMOTE)    -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+	<!-- GSAP GREENSOCK (LOCAL) -->
+	<!-- <script src="assets/gsap/TweenMax.min.js" ></script> -->
+  <!-- <script src="assets/gsap/TimelineMax.min.js" ></script> -->
+  
+  <!-- PAYPAL JS -->
+  <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+  
+  <!-- TACHYONS CSS (LOCAL) -->
+  <link rel="stylesheet" href="assets/css/tachyons.min.css" />
+	<!-- NATIVE CSS (LOCAL)        -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+<body class="avenir border-box">
+
+<!-- IN TERMINAL: BROWSER-SYNC COMMAND WHEN BUILDING: -->
+<!-- browser-sync start --server --files "index.html, assets/css/styles.css, assets/js/app.js" -->
+
+
+<!-- REVISION -->
+<!-- TACHYON MEDIA QUERY BREAKPOINTS: -->
+<!--   (default)  = <480              -->
+<!--      ns      = >480+ALL           SINGLEHANDEDLY DICTATES ALL SIZES ABOVE DEFAULT -->
+<!--       m      =  480 to 960       -->
+<!--       l      = >960              -->
+
+<!-- MEDIA QUERY FURTHER INFO:
+
+NS = NOTSMALL: DICTATES *ALL* BROWSER SIZES *ABOVE* 480px+
+@media (--breakpoint-not-small) {
+	.medium-and-larger-specific-style {
+		background-color: red;
+	}
+}
+
+M = Takes over from above DEFAULT (480px) to 960px
+@media (--breakpoint-medium) {
+	.medium-screen-specific-style {
+		background-color: red;
+	}
+}
+
+L = 640px+
+@media (--breakpoint-large) {
+	.large-and-larger-screen-specific-style {
+	background-color: red;
+	}
+} -->
+
+<!-- 
+SO, you should only ever use:
+	1. (default) and NS
+	or
+	2. (default), M(480to960), and L(960)
+-->
+
+<!-- - - - - - - START BODY - - - - - - - - - - - - -->
+
+  <!-- START NAVBAR -->
+  <header class="avenir sans-serif bg-arss2">
+    <nav class="dt w-100 mw8 center">
+      <div class="dtc w2 v-mid pa3">
+        <a href="/" class="dib w2 h2 ba b--white-90 grow-large border-box">
+          
+          <svg class=" hover-white" xmlns="http://www.w3.org/2000/svg" viewBox="40 40 238.62 238.62">
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: #ff0064;
+                }
+          
+                .cls-2a {
+                  fill: #ffffff;
+                }
+              </style>
+            </defs>
+          
+            <title>Asset 3</title>
+          
+            <g id="ARss-logo">
+              <!-- <rect id="Red-Square" class="cls-1" width="318.62" height="318.62" /> -->
+              <path id="A" class="cls-2a " d="M127.79,191.17H115.22l-6.86-16.33h-32l-7,16.33H57.23L87,123H98ZM92.32,137.24,80.72,164.3H104Z"
+              />
+              <path id="R" class="cls-2a" d="M178.71,191.17l-16.62-23.58H147.21v23.58H135.32V123.52h30.15c15.56,0,25.13,8.21,25.13,21.45,0,11.22-6.67,18-16.14,20.59l18.27,25.61Zm-14.2-56.83h-17.3v22.72H164.6c8.51,0,13.92-4.45,13.92-11.41C178.52,138.21,173.3,134.34,164.51,134.34Z"
+              />
+              <path id="S-1" class="cls-2a" d="M211.41,197.14a26.23,26.23,0,0,1-15.85-5.59l3.82-5.81a20.91,20.91,0,0,0,12.24,4.6c3.68,0,5.81-1.55,5.81-4v-.14c0-2.9-4-3.9-8.36-5.24-5.52-1.56-11.67-3.82-11.67-11v-.14c0-7.08,5.87-11.4,13.3-11.4a25.89,25.89,0,0,1,13.73,4.25L221,168.76c-3.61-2.2-7.44-3.54-10.55-3.54-3.33,0-5.24,1.55-5.24,3.75v.14c0,2.69,4,3.82,8.43,5.24,5.45,1.7,11.6,4.17,11.6,10.9v.14C225.28,193.25,219.2,197.14,211.41,197.14Z"
+              />
+              <path id="S-2" class="cls-2a" d="M244.53,197.14a26.23,26.23,0,0,1-15.85-5.59l3.82-5.81a20.91,20.91,0,0,0,12.25,4.6c3.68,0,5.8-1.55,5.8-4v-.14c0-2.9-4-3.9-8.35-5.24-5.52-1.56-11.68-3.82-11.68-11v-.14c0-7.08,5.87-11.4,13.31-11.4a25.92,25.92,0,0,1,13.73,4.25l-3.4,6.09c-3.61-2.2-7.43-3.54-10.55-3.54-3.32,0-5.23,1.55-5.23,3.75v.14c0,2.69,4,3.82,8.42,5.24,5.45,1.7,11.61,4.17,11.61,10.9v.14C258.41,193.25,252.32,197.14,244.53,197.14Z"
+              />
+          
+              <g id="Copyright">
+                <path class="cls-2" d="M268.47,153.1a7.79,7.79,0,0,1-7.82-7.82,7.87,7.87,0,0,1,7.86-7.86,7.84,7.84,0,0,1,0,15.68Zm0-14.81a7,7,0,1,0,6.91,7A6.9,6.9,0,0,0,268.51,138.29Zm1.93,7.93,2,3h-2.15l-1.77-2.68H267.1v2.68h-1.84v-8.33H269c2,0,3.27,1,3.27,2.75A2.6,2.6,0,0,1,270.44,146.22Zm-1.54-3.73h-1.8v2.45H269c.93,0,1.43-.5,1.43-1.22S269.81,142.49,268.9,142.49Z"
+                />
+              </g>
+          
+            </g>
+          </svg>
+          
+          
+          
+        </a>
+      </div>
+      <div class="v-mid tr pa3">
+        <a class="f6 fw4 hover-white no-underline white-70 pr3                    " href="#howitworks">How it Works</a>
+        <a class="f6 fw4 hover-white no-underline white-70 pr3 dn dib-ns           " href="#pricing">Pricing</a>
+        <a class="f6 fw4 hover-white no-underline white-70 pr3              " href="#faq">FAQ</a>
+        <a class="f6 fw4 hover-white no-underline white-70 pr3 dn dib-l  " href="#aboutus">About Us</a>
+        <a class="f6 fw4 hover-white no-underline white-70 pr3 dn dib-l " href="#contact">Contact</a>
+        <a class="f6 fw4 hover-white no-underline white-70           dib   ml2 pv2 ph3 ba " href="#pricing">Purchase</a>
+      </div>
+    </nav>
+  </header>
+  <!-- END NAVBAR -->
+
+<!-- SVG LOGO/LOGOTYPE -->
+<div id='svg-container' class=" bg-arss tc pv5">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 190.27 241.63"
+  class="grow mw4">
+
+    <defs>
+      <style>
+        .cls-1 {
+          fill: #a5ffff;}
+        .cls-2 {
+          fill: #a5c3ff;
+          opacity: 0.8;}
+        .cls-3 {
+          fill: #a5e1ff;
+          opacity: 0.9;}
+      </style>
+    </defs>
+
+    <title>
+      arss-logotype
+    </title>
+
+    <g id="arss" data-name="arss">
+      <g id="arss-phone-and-type">
+        <path id="A" class="cls-1" d="M41.17,209.79H33.84l-4-9.53H11.17l-4.06,9.53H0L17.37,170H23.8Zm-20.7-31.47L13.7,194.11H27.3Z"
+        />
+        <path id="R" class="cls-1" d="M70.81,209.79,61.11,196H52.42v13.76H45.49V170.31H63.08c9.08,0,14.67,4.79,14.67,12.52,0,6.54-3.9,10.49-9.42,12L79,209.79Zm-8.29-33.16H52.42v13.25H62.58c5,0,8.12-2.6,8.12-6.66C70.7,178.88,67.65,176.63,62.52,176.63Z"
+        />
+        <g id="social">
+          <path class="cls-1" d="M88.91,213.71a12.1,12.1,0,0,1-7.31-2.58l1.76-2.68A9.64,9.64,0,0,0,89,210.57c1.7,0,2.68-.71,2.68-1.86v-.06c0-1.34-1.83-1.8-3.85-2.42-2.55-.72-5.39-1.76-5.39-5.06v-.07c0-3.26,2.71-5.26,6.14-5.26a12,12,0,0,1,6.34,2l-1.57,2.81A10,10,0,0,0,88.49,199c-1.53,0-2.42.72-2.42,1.73v.07c0,1.24,1.87,1.76,3.89,2.41,2.52.79,5.36,1.93,5.36,5v.07C95.32,211.91,92.51,213.71,88.91,213.71Z"
+          />
+          <path class="cls-1" d="M107.53,213.78a8.92,8.92,0,0,1-9.14-8.95,9.2,9.2,0,1,1,9.14,8.95Zm0-14.54c-3.17,0-5.19,2.48-5.19,5.52a5.34,5.34,0,0,0,5.26,5.59,5.19,5.19,0,0,0,5.22-5.52A5.34,5.34,0,0,0,107.53,199.24Z"
+          />
+          <path class="cls-1" d="M128.76,213.78a9,9,0,0,1,0-18,8.64,8.64,0,0,1,6.9,3l-2.45,2.65a5.8,5.8,0,0,0-4.48-2.16c-2.87,0-5,2.48-5,5.52s2.12,5.59,5.16,5.59a6.08,6.08,0,0,0,4.47-2.16l2.39,2.35A8.72,8.72,0,0,1,128.76,213.78Z"
+          />
+          <path class="cls-1" d="M139.51,193.49v-3.76h4.24v3.76Zm.16,19.89V196.14h4v17.24Z" />
+          <path class="cls-1" d="M159.33,213.38v-2.12a7,7,0,0,1-5.58,2.48c-3.27,0-6.15-1.86-6.15-5.32v-.07c0-3.72,3-5.55,7-5.55a14.32,14.32,0,0,1,4.76.72v-.43c0-2.38-1.5-3.69-4.24-3.69a12,12,0,0,0-4.93,1.08l-1.08-3.17a14.74,14.74,0,0,1,6.56-1.43c5.1,0,7.58,2.67,7.58,7.28v10.22Zm.1-7.31a11.33,11.33,0,0,0-4-.69c-2.49,0-4,1-4,2.78v.06c0,1.64,1.47,2.55,3.34,2.55,2.61,0,4.57-1.47,4.57-3.63Z"
+          />
+          <path class="cls-1" d="M168.18,213.38V189.54h3.95v23.84Z" />
+        </g>
+
+        <g id="studio">
+          <path class="cls-1" d="M88.91,241.56A12.1,12.1,0,0,1,81.6,239l1.76-2.68A9.66,9.66,0,0,0,89,238.43c1.7,0,2.68-.72,2.68-1.87v-.06c0-1.34-1.83-1.8-3.85-2.42-2.55-.72-5.39-1.76-5.39-5.06V229c0-3.26,2.71-5.26,6.14-5.26a12.06,12.06,0,0,1,6.34,2l-1.57,2.81a10,10,0,0,0-4.87-1.63c-1.53,0-2.42.72-2.42,1.73v.07c0,1.24,1.87,1.76,3.89,2.41,2.52.79,5.36,1.93,5.36,5v.07C95.32,239.77,92.51,241.56,88.91,241.56Z"/>
+          <path class="cls-1" d="M103.78,235.85A1.88,1.88,0,0,0,105.9,238a5.24,5.24,0,0,0,2.45-.59v3.24a7,7,0,0,1-3.56.88c-2.91,0-5-1.28-5-5.06v-9.08H97.63V224h2.19v-4.74h4V224h4.63v3.4h-4.63Z"/>
+          <path class="cls-1" d="M123.73,224h4v17.25h-4v-2.68a6.21,6.21,0,0,1-5.39,3c-3.89,0-6.14-2.61-6.14-6.63V224h4v9.8c0,2.68,1.34,4.21,3.69,4.21s3.89-1.6,3.89-4.28Z"/>
+          <path class="cls-1" d="M145.65,241.24v-2.88a6.9,6.9,0,0,1-5.88,3.23c-4.05,0-8-3.23-8-9s3.89-9,8-9a7.16,7.16,0,0,1,5.88,3v-9.28h3.95v23.85Zm-4.94-14.18c-2.71,0-5,2.09-5,5.55s2.29,5.55,5,5.55,5-2.18,5-5.55S143.36,227.06,140.71,227.06Z"/>
+          <path class="cls-1" d="M154.59,221.34v-3.75h4.25v3.75Zm.17,19.9V224h4v17.25Z" />
+          <path class="cls-1" d="M172.07,241.63a8.93,8.93,0,0,1-9.15-8.95,9.2,9.2,0,1,1,9.15,8.95Zm0-14.54a5.19,5.19,0,0,0-5.2,5.52,5.34,5.34,0,0,0,5.26,5.59,5.2,5.2,0,0,0,5.23-5.52A5.34,5.34,0,0,0,172.07,227.09Z"/>
+        </g>
+
+        <g id="Copyright">
+          <path class="cls-1" d="M186.81,224.27a3.43,3.43,0,0,1-3.44-3.44,3.47,3.47,0,0,1,3.46-3.46,3.45,3.45,0,0,1,0,6.9Zm0-6.52a3,3,0,0,0-3.06,3.08,3.05,3.05,0,1,0,3.06-3.08Zm.85,3.49.9,1.32h-1l-.78-1.18h-.64v1.18h-.81v-3.67H187c.88,0,1.44.45,1.44,1.21A1.13,1.13,0,0,1,187.68,221.24ZM187,219.6h-.8v1.08H187c.41,0,.63-.22.63-.53S187.41,219.6,187,219.6Z"/>
+        </g>
+
+        <path id="phoneTop" class="cls-1" d="M130.51,13.87V11.76A11.78,11.78,0,0,0,118.74,0H66.52A11.78,11.78,0,0,0,54.76,11.76v2.11Z"/>
+
+        <g id="phoneSides">
+          <polygon class="cls-1" points="58.66 26.31 54.76 23.13 54.76 125.23 59.24 121.55 58.66 26.31" />
+          <polygon class="cls-1" points="130.51 23.13 126.66 26.27 126.66 122.07 130.51 125.23 130.51 23.13" />
+          <rect class="cls-1" x="52.93" y="30.36" width="3.8" height="10.44" rx="1.45" ry="1.45" />
+          <rect class="cls-1" x="52.93" y="44.6" width="3.8" height="10.44" rx="1.45" ry="1.45" />
+        </g>
+
+        <g id="phone3D-1">
+          <polygon class="cls-3" points="117.87 33.42 117.87 114.85 121.09 117.5 121.09 30.79 117.87 33.42" />
+          <polygon class="cls-3" points="67.4 114.85 67.4 33.42 64.17 30.8 64.17 117.5 67.4 114.85" />
+        </g>
+        <g id="phone3D-2">
+          <polygon class="cls-2" points="74.65 39.32 72.13 37.27 72.13 110.95 74.65 108.89 74.65 39.32" />
+          <polygon class="cls-2" points="110.62 39.32 110.62 108.89 113.13 110.96 113.13 37.27 110.62 39.32" />
+        </g>
+
+        <path id="phoneBottom" class="cls-1" d="M54.76,134.5v2.11a11.78,11.78,0,0,0,11.76,11.76h52.22a11.78,11.78,0,0,0,11.77-11.76V134.5Zm37.87,10.12a3.13,3.13,0,1,1,3.13-3.13A3.13,3.13,0,0,1,92.63,144.62Z"/>
+
+      </g>
+    </g>
+  </svg>
+
+</div>
+
+<!-- HEADLINE AND SUBHEAD -->
+<div class=" bg-arss2 pt4 ph3 pb4">
+  <div class="">
+    <p class="grow f2 arss-cyan tc">Facebook Camera Effects, On Demand.</p>
+    <p class="f4 f4-m ph2 f4-l ph4-m ph6-l lh-copy arss-navy tc">We offer clearly-scoped, fixed-priced packages to build custom Facebook Camera Effects. ARss is the easiest and fastest way to build and publish an experience for the <a class="no-underline" href="https://www.facebook.com/fbcameraeffects/home/" target="_blank"><strong class="fw6">Camera Effects Platform</strong></a>.</p>
+  </div>
+</div>
+
+
+
+<!-- #1 GFYCAT DUAL COLUMN DIV - GFYCAT LEFT-->
+<div class=" flex justify-center flex-wrap bg-arss2 items-center pt3 pb5">
+
+  <iframe class="grow" src='https://gfycat.com/ifr/RectangularYoungBluet' frameborder='0' scrolling='no' allowfullscreen width='268' height='480'></iframe>
+
+  <div class="grow mw5 ml0 mv4 ml4-ns items-center">
+    <h1 class="f6 f7-m tracked fw5 arss-cyan">CASE STUDY</h1>
+    <h1 class="f2 fw5 arss-cyan">Museum of Ice Cream</h1>
+    <p class="f4  lh-copy arss-navy">
+			For the <a href="https://www.museumoficecream.com/" target="_blank">Museum of Ice Cream</a> in Los Angeles, we created an interactive, candy-colored experience that turns your eyes into peppermints. When you open your mouth, ice cream cones fly into it!
+			<br>
+			<br> Experience the Museum of Ice Cream Camera Effect yourself by clicking
+			<a href="https://www.facebook.com/fbcameraeffects/tryit/1883669451963022/"
+			 target="_blank">
+				<strong>this link</strong>
+			</a> on your mobile device.
+    </p>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- #2 GFYCAT DUAL COLUMN DIV - GFYCAT RIGHT - ARSS-->
+<div class=" tl tr-ns flex justify-center flex-wrap bg-arss items-center pt5 pb5">
+
+	<div class="grow mw5 ml0 mv2 mr4-ns items-center">
+		<h1 class="f6 f7-m tracked fw5 arss-cyan">CASE STUDY</h1>
+		<h1 class="f2 fw5 arss-cyan">Daft Punk</h1>
+		<p class="f4 lh-copy arss-navy">
+			We created a realistic, wearable Daft Punk 3D helmet, famously worn at concert appearances by Guy Manuel, half of the Daft
+			Punk Duo.
+			<br>
+			<br> Experience the Daft Punk Camera Effect yourself by clicking
+			<a href="https://www.facebook.com/fbcameraeffects/tryit/1967999680116292/"
+			 target="_blank">
+				<strong>this link</strong>
+			</a> on your mobile device.
+		</p>
+	</div>
+	<!-- <iframe class="grow" src='https://gfycat.com/RepentantOddballBrant' frameborder='0' scrolling='no' allowfullscreen width='268' height='480'></iframe> -->
+	<iframe class="grow" src='https://gfycat.com/ifr/RepentantOddballBrant' frameborder='0' scrolling='no' width='260' height='480'
+	 allowfullscreen></iframe>
+</div>
+
+
+
+
+
+
+<!-- HOW IT WORKS -->
+<div class=" bg-arss2 pt4 ph4 pb6 pt5" name="howitworks">
+
+    <p class="grow f2 arss-cyan tc pb0 mb0">How It Works</p>
+    <p class=" f6 tracked arss-cyan tc ttu pb4">In five steps</p>
+    <p class="f4 ph3 f4-m f4-l ph4-m ph7-l lh-copy arss-navy tc">
+      <strong class="white">1.</strong><strong> Visit our <a href="#pricing" class="arss-navy">Purchase section</a></strong> and select a package. We ask for a refundable 10% down payment.
+      <br>
+      <br>
+      <br>
+      <strong class="white">2.</strong>
+      We'll get in touch via email, and you can give us your <strong>creative brief</strong>: Your brand, assets, and the experience you want to create.
+      <br>
+      <br>
+      <br>
+      <strong class="white">3.</strong>
+       Within 2 days, we'll deliver your <strong>treatment proposal</strong> for your Camera Effect.
+      <br>
+      <br>
+      <br>
+      <strong class="white">4.</strong>
+      Within 7 days, we'll <strong>develop and build</strong> your Camera Effect.
+      <br>
+      <br>
+      <br>
+      <strong class="white">5.</strong>
+      Upon your approval, we'll <strong>publish your Camera Effect</strong> via your Facebook page or provide 
+      instructions to self-publish.</p>
+
+</div>
+
+
+
+
+
+
+<!-- #3 GFYCAT DUAL COLUMN DIV - GFYCAT LEFT-->
+<div class="flex justify-center flex-wrap bg-arss items-center pt5 pb5">
+
+	<iframe class="grow" src='https://gfycat.com/ifr/RectangularYoungBluet' frameborder='0' scrolling='no' allowfullscreen width='268'
+	 height='480'></iframe>
+
+	<div class="grow mw5 ml0 mv4 ml4-ns items-center">
+		<h1 class="f6 f7-m tracked fw5 arss-cyan">CASE STUDY</h1>
+		<h1 class="f2 fw5 arss-cyan">FriYay Shades</h1>
+		<p class="f4 lh-copy arss-navy">
+			It's Friday and time to rock your weekend shades 😎😎😎. This Camera Effect demonstrates that even memes can translate into fun, shareable AR experiences.
+			<br>
+			<br> Try out the FriYay Shades yourself by clicking
+			<a href="https://www.facebook.com/fbcameraeffects/tryit/1969357643386981/" target="_blank">
+				<strong>this link</strong>
+			</a> on your mobile device.
+		</p>
+	</div>
+
+</div>
+
+
+
+
+
+
+<!-- PURCHASE & PRICING -->
+<div class=" bg-arss2 ph3 pb6 pt6" name="pricing">
+    <p class="grow f2  arss-cyan tc mb2">Purchase & Pricing</p>
+
+
+    <p class="f4 ph2 f4-m f4-l ph4-m ph6-l lh-copy arss-navy tc mt0 pt0">We offer two packages which vary according to scope and schedule. 
+    </p>
+
+<br>
+<br>
+<br>
+
+
+
+
+  <!-- PACKAGE 1 -->
+  <div id='PACKAGE-CONTAINER-1'>
+    
+      <p class="f3 ph2 f3-m f4-l fw7 ph4-m ph6-l lh-copy arss-navy tc">PACKAGE #1:<br>
+
+      <span class="arss-cyan fw5">7-Day Express Service</span>
+      </p>
+
+      <hr class="w5">
+
+
+      <p class="f4 ph2 ph3-ns ph5-m ph7-l lh-copy arss-navy tc">
+      <strong>Includes:</strong>
+      <br>
+      <br>
+      • Custom 3D-modeling, lighting, and texturing
+      <br>
+      <br>
+      • Face-tracking: Clothing, elements, and props which track above, beside, or on top of the user's face
+      <br>
+      <br>
+      • <strong class="fw7">7-Day Turnaround</strong>: Your Camera Effect will be fully built and ready to deploy 7 days after we've received your brief.
+      <br>
+      <br>
+      • Deployment to the Facebook Camera Platform via your Facebook Page
+      <br>
+      <br>
+      • Promotion strategies based on your audience and usage goals
+      </p>
+
+      <br>
+
+        <!-- PRICE POINT 1 -->
+        <div class="flex flex-column items-center  ">
+          <p class="f3 fw6 arss-navy">Price:
+            <strong class="f2 f3-ns fw6 white">$2400</strong>
+          </p>
+
+          <p class="f4 f5-ns ph4 tc arss-navy mt0 mb5 lh-copy">
+            (<span class="fw7">Initial 10% down payment of $240</span>;
+            <br> refundable if you don't move forward)
+          </p>
+          <!-- THE BUTTON -->
+          <!-- <a class="f4 grow no-underline br2 ph4 pv3 mb2 dib white bg-purple mh2" href="#0">
+            Purchase Package #1: 7-Day Service
+          </a> -->
+
+
+
+
+
+
+          <!-- PAYPAL BUTTON 1-->
+          <!-- PAYPAL BUTTON 1-->
+          <!-- PAYPAL BUTTON 1-->
+          <!-- PAYPAL BUTTON 1-->
+          <!-- PAYPAL BUTTON 1-->
+          <!-- PAYPAL BUTTON 1-->
+          <div id="paypal-button1"></div>
+
+
+          <!-- PAYPAL SCRIPT 1-->
+          <script>
+            paypal.Button.render({
+              // env: 'sandbox',
+              env: 'production',
+
+
+              client: {
+                sandbox: 'AYquvY02em_MzIBQ5RJY_ghNGzxqeMOhcJAiQ3TSPOU1C88jX6HCxo1z6kPqLHE_J8LQkqystpspPQoT',
+                production: 'AeWlG37pAov2OrnBLXcpGbOCuS1cUeQ97XdG8euPQRd2w7Wo2b2ovYMok3emD20MNvghyqnDlyfYZSq6'
+              },
+
+
+              commit: true, // Show a 'Pay Now' button
+
+              style: {
+                label: 'checkout',
+                size:  'large',    // small | medium | large | responsive
+                shape: 'pill',     // pill | rect
+                color: 'gold'      // gold | blue | silver | black
+              },
+              payment: function (data, actions) {
+                return actions.payment.create({
+                  payment: {
+                    transactions: [
+                      {
+                        amount: { total: '240.00', currency: 'USD' }
+                      }
+                    ]
+                  },
+
+                  experience: {
+
+
+                    presentation: {
+                      logo_image: "https://thearss.com/assets/images/arss-logo-190.gif"
+                    },
+
+
+
+                    input_fields: {
+                      no_shipping: 1
+                    }
+                  }
+                });
+              },
+              onAuthorize: function (data, actions) {
+                // Makes a call to the REST api to execute the payment
+                return actions.payment.execute().then(function (payment) {
+                  
+                  //Your payment is complete!
+                  // window.alert('Thank you for your payment to ARss! We\'ll be in touch shortly via email to receive your creative brief for your Facebook Camera Effect!');
+                  // You can now show a confirmation message to the customer
+                    window.location.href = 'https://thearss.com/thankyou.html';
+                });
+              },
+              onCancel: function (data, actions) {
+                /* 
+                 * Buyer cancelled the payment 
+                 */
+              },
+              onError: function (err) {
+                /* 
+                 * An error occurred during the transaction 
+                 */
+              }
+            }, '#paypal-button1');
+          </script>
+
+
+
+        </div>
+
+
+  </div>
+</div>
+
+
+
+
+
+  <!-- PACKAGE 2 -->
+  <div id='PACKAGE-CONTAINER-2' class="bg-arss pt5 pb6">
+    <p class="f3 f3-m f4-l fw7 ph4-m ph6-l lh-copy arss-navy tc">PACKAGE #2: <br>
+      <span class="arss-cyan fw5">14-Day Express Service</span>
+    </p>
+  
+    <hr class="w5">
+  
+  
+    <p class="f4 ph4 ph3-ns ph5-m ph7-l lh-copy arss-navy tc">
+      <strong>Includes:</strong>
+      <br>
+      <br> • Custom 3D-modeling, lighting, and texturing
+      <br>
+      <br> • Face-tracking: Clothing, elements, and props which track above, beside, or on top of the user's face
+      <br>
+      <br> • <strong class="fw7">14-Day Turnaround</strong>: Your Camera Effect will be fully built and ready to deploy 7 days after we've received your brief
+      <br>
+      <br> • Deployment to the Facebook Camera Platform via your Facebook Page
+      <br>
+      <br> • Promotion strategies based on your audience and usage goals
+    </p>
+  
+
+    <br>
+  
+
+
+        <!-- PRICE POINT 2-->
+        <div class="flex flex-column items-center  ">
+          <p class="f3 fw6 arss-navy">Price:
+						<strong class="f2 f3-ns fw6 white">$1900</strong>
+					</p>
+					
+					<p class="f4 f5-ns ph4 tc arss-navy mt0 mb5 lh-copy">
+							(<span class="fw7">Initial 10% down payment of $190</span>; <br>  refundable if you don't move forward)
+					</p>
+          <!-- THE BUTTON -->
+          <!-- <a class="f4 grow no-underline br2 ph4 pv3 mb2 dib white bg-purple mh2" href="#0">
+            Purchase Package #2: 14-Day Service
+          </a> -->
+
+          <!-- PAYPAL BUTTON 2-->
+          <!-- PAYPAL BUTTON 2-->
+          <!-- PAYPAL BUTTON 2-->
+          <!-- PAYPAL BUTTON 2-->
+          <!-- PAYPAL BUTTON 2-->
+          <!-- PAYPAL BUTTON 2-->
+          <div id="paypal-button2"></div>
+
+
+          <!-- PAYPAL SCRIPT 2 -->
+          <script>
+            paypal.Button.render({
+              // env: 'sandbox',
+              env: 'production',
+
+
+              client: {
+                sandbox: 'AYquvY02em_MzIBQ5RJY_ghNGzxqeMOhcJAiQ3TSPOU1C88jX6HCxo1z6kPqLHE_J8LQkqystpspPQoT',
+                production: 'AeWlG37pAov2OrnBLXcpGbOCuS1cUeQ97XdG8euPQRd2w7Wo2b2ovYMok3emD20MNvghyqnDlyfYZSq6'
+              },
+
+
+              commit: true, // Show a 'Pay Now' button
+
+              style: {
+                label: 'checkout',
+                size: 'large',    // small | medium | large | responsive
+                shape: 'pill',     // pill | rect
+                color: 'gold'      // gold | blue | silver | black
+              },
+              payment: function (data, actions) {
+                return actions.payment.create({
+                  payment: {
+                    transactions: [
+                      {
+                        // amount: { total: '190.00', currency: 'USD' }
+                        amount: { total: '190.00', currency: 'USD' }
+                      }
+                    ]
+                  },
+
+                  experience: {
+
+                    presentation: {
+                      logo_image: "https://thearss.com/logo.html"
+                    },
+
+                    input_fields: {
+                      no_shipping: 1
+                    }
+                  }
+
+
+                });
+              },
+              
+
+              onAuthorize: function (data, actions) {
+                
+                // Makes a call to the REST api to execute the payment
+                return actions.payment.execute().then(function (payment) {
+
+                  //Your payment is complete!
+                  // window.alert('Thank you for your payment to ARss! We\'ll be in touch shortly via email to receive your creative brief for your Facebook Camera Effect!');
+                  // You can now show a confirmation message to the customer
+                  window.location.href = 'https://thearss.com/thankyou.html';
+
+                });
+
+              },
+              onCancel: function (data, actions) {
+                /* 
+                 * Buyer cancelled the payment 
+                 */
+              },
+              onError: function (err) {
+                /* 
+                 * An error occurred during the transaction 
+                 */
+              }
+            }, '#paypal-button2');
+          </script>
+
+        </div>
+      
+
+  </div>
+
+
+
+
+
+
+
+
+
+<!-- FAQ -->
+<div id="faq" class=" bg-arss2 pt4 ph3 pb6 pt5" name="faq">
+
+
+    <p class="grow f2  arss-cyan tc">FAQ</p>
+
+    <!-- QUESTION 1 -->
+    <p class="f4 ph3 fw7 f4-m f4-l ph4-m ph6-l lh-copy arss-navy tc">Q: Do you provide a money-back guarantee?</p>
+    <!-- ANSWER 1 -->
+    <p class="f4 ph3 f4-m f4-l ph4-m ph6-l lh-copy arss-navy tc">A: Yes. We guarantee our development quality and your satisfaction. Our clients are important to us; we want your future business and referrals. If you're not happy, we'll gladly refund your payment. </p>
+ 
+<br>
+<br>
+
+<p class="f4 ph3 fw4 f4-m f4-l ph4-m ph6-l lh-copy arss-navy tc">Have more questions? Ask us anything at <a href="mailto:aaron.adler@thearss.com" class="purple">aaron.adler@thearss.com</a></p>
+
+
+  
+  
+
+
+
+</div>
+
+
+
+
+<!-- ABOUT US -->
+<div class=" bg-arss pt4 ph3 pb6 pt5" name="aboutus">
+  <div class="">
+    <p class="grow f2  arss-cyan tc">About Us</p>
+    <p class="f4 ph3 f4-m f4-l ph4-m ph6-l lh-copy arss-navy tc">
+       ARSocialStudio is a small team in New York City focused on creating industry-leading Facebook Camera experiences.
+
+      <br>
+      <br>
+      We specialize in immersive Facebook Camera Effects and Snapchat Lenses that users can access anywhere in the world, from
+      their mobile device.
+      
+      <br>
+      <br>
+      Our goal is to create best-in-class social media-powered Camera Effect experiences that get shared and talked about.
+      <br>
+      <br>
+      ARss is led by creative director / designer / developer Aaron Adler in NYC. Aaron is an avid digital creator and was one of the first developers to sign up for Facebook's AR Studio IDE. Aaron was most recently a
+      Creative Director at Droga5 in New York, and has worked on creative projects for Facebook, Google, R/GA and others. View his personal website
+      <a href="https://aaronadler.com" target="_blank">here</a>.
+      
+      
+
+
+
+    </p>
+  </div>
+</div>
+
+
+
+<!-- Contact & Social -->
+<div class="bg-arss2 pt4 ph3 pb6 pt5" name="contact">
+  <div class="">
+    <p class="grow f2  arss-cyan tc">Contact & Social</p>
+    <p class=" f4 ph3 f4-m f4-l ph4-m ph6-l lh-copy arss-navy tc">Questions about Camera Effects and/or ARss services? Email us at
+    <a href="mailto:aaron.adler@thearss.com" class="">
+      <strong class="fw4 ">aaron.adler@thearss.com</strong>
+    </a>.
+</p>
+<br>
+<p class="f4 ph3 f4-m f4-l pt4 pb0 lh-copy arss-navy tc"> Visit our social channels below:
+</p>
+
+</div>
+
+
+
+<!-- SOCIAL ICONS -->
+
+  <div class="tc flex justify-center mt4">
+
+    <!-- FACEBOOK ICON -->
+    <a class=" grow-large dib h3 w3 mr4" href="https://www.facebook.com/ARsocialstudio-160758384681784/">
+      <svg fill="white " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 16 16 " fill-rule="evenodd " clip-rule="evenodd
+      " stroke-linejoin="round " stroke-miterlimit="1.414 ">
+      <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066
+      1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.476-1.195 1.176v1.54h2.39l-.31 2.416h-2.08V16h4.077c.488
+      0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0 " fill-rule="nonzero " />
+      </svg>
+    </a>
+
+
+    
+    <!-- INSTAGRAM ICON -->
+    <a class=" grow-large near-black dib h3 w3 mr4" href="https://www.instagram.com/arsocialstudio/" title="Instagram ">
+      <svg fill="white " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 16 16 " fill-rule="evenodd " clip-rule="evenodd
+      " stroke-linejoin="round " stroke-miterlimit="1.414 ">
+      <path d="M8 0C5.827 0 5.555.01 4.702.048 3.85.088 3.27.222 2.76.42c-.526.204-.973.478-1.417.923-.445.444-.72.89-.923
+      1.417-.198.51-.333 1.09-.372 1.942C.008 5.555 0 5.827 0 8s.01 2.445.048 3.298c.04.852.174 1.433.372 1.942.204.526.478.973.923
+      1.417.444.445.89.72 1.417.923.51.198 1.09.333 1.942.372.853.04 1.125.048 3.298.048s2.445-.01 3.298-.048c.852-.04 1.433-.174
+      1.942-.372.526-.204.973-.478 1.417-.923.445-.444.72-.89.923-1.417.198-.51.333-1.09.372-1.942.04-.853.048-1.125.048-3.298s-.01-2.445-.048-3.298c-.04-.852-.174-1.433-.372-1.942-.204-.526-.478-.973-.923-1.417-.444-.445-.89-.72-1.417-.923-.51-.198-1.09-.333-1.942-.372C10.445.008
+      10.173 0 8 0zm0 1.44c2.136 0 2.39.01 3.233.048.78.036 1.203.166 1.485.276.374.145.64.318.92.598.28.28.453.546.598.92.11.282.24.705.276
+      1.485.038.844.047 1.097.047 3.233s-.01 2.39-.048 3.233c-.036.78-.166 1.203-.276 1.485-.145.374-.318.64-.598.92-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.844.038-1.097.047-3.233.047s-2.39-.01-3.233-.048c-.78-.036-1.203-.166-1.485-.276-.374-.145-.64-.318-.92-.598-.28-.28-.453-.546-.598-.92-.11-.282-.24-.705-.276-1.485C1.45
+      10.39 1.44 10.136 1.44 8s.01-2.39.048-3.233c.036-.78.166-1.203.276-1.485.145-.374.318-.64.598-.92.28-.28.546-.453.92-.598.282-.11.705-.24
+      1.485-.276C5.61 1.45 5.864 1.44 8 1.44zm0 2.452c-2.27 0-4.108 1.84-4.108 4.108 0 2.27 1.84 4.108 4.108 4.108 2.27 0 4.108-1.84
+      4.108-4.108 0-2.27-1.84-4.108-4.108-4.108zm0 6.775c-1.473 0-2.667-1.194-2.667-2.667 0-1.473 1.194-2.667 2.667-2.667 1.473
+      0 2.667 1.194 2.667 2.667 0 1.473-1.194 2.667-2.667 2.667zm5.23-6.937c0 .53-.43.96-.96.96s-.96-.43-.96-.96.43-.96.96-.96.96.43.96.96z "
+      />
+      </svg>
+    </a>
+    
+    <!-- TWITTER ICON -->
+    <a class="grow-large dib h3 w3" href="https://twitter.com/arsocialstudio/" title="Twitter">
+      <svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+      stroke-miterlimit="1.414">
+      <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.375-1.337.648-2.085.795-.598-.638-1.45-1.036-2.396-1.036-1.812 0-3.282 1.468-3.282 3.28 0 .258.03.51.085.75C5.152 5.39 2.733 4.084 1.114 2.1.83 2.583.67 3.147.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.416-.02-.617-.058.418 1.304 1.63 2.253 3.067 2.28-1.124.88-2.54 1.404-4.077 1.404-.265 0-.526-.015-.783-.045 1.453.93 3.178 1.474 5.032 1.474 6.038 0 9.34-5 9.34-9.338 0-.143-.004-.284-.01-.425.64-.463 1.198-1.04 1.638-1.7z"
+      fill-rule="nonzero" />
+      </svg>
+    </a>
+
+  </div>
+
+</div>
+
+  <!-- SVG Icons are from https://simpleicons.org -->
+
+
+
+  <footer class="f3 bg-arss white ma0 pt4">
+   
+    <div class="mh4 mt5 mb6">
+        
+      <div class="ph3 mb4-l cf">
+
+        <p class="fl w-100 pv0 mb0 white-70">Reach out anytime:</p>
+        <a href="mailto:aaron.adler@thearss.com"><p class="fl dim w-100 pv0 mb4 white">aaron.adler@thearss.com</p></a>
+
+        <article class="fl dib-ns w-auto-ns mr4-m mr5-l mb0 pr2 pr0-ns">
+          <h4 class="f4-l fw6 mb3">NYC</h4>
+          <span class="f6-l db arss-navy">Union Square</span>
+          <span class="f6-l arss-navy">NY NY 10003 </span>
+          <!-- <a class="db fw6 pv3  link dim arss-navy" title="Call" href="tel:+12126021410">
+          +1 212
+          </a> -->
+        </article>
+      
+      </div>
+    
+    <!-- FORM SECTION (DISABLED) -->
+    <!-- <section class="cf mb5">
+      <div class="mb4 mb0-ns fl w-100 w-50-l ">
+        <p class="f6 fw4 mb2 mt0 measure-narrow lh-copy">
+        Sign up for our infrequent newsletter about cutting-edge social content formats.
+        </p>
+        <input placeholder="Work email address" class=" mw-100 w-100 w5-ns f5 input-reset ba b--black-20 pv3 ph4 border-box">
+        <input type="submit" value="Submit" class="input-reset w-100 w-auto-ns bg-black-80 white f5 pv2 pv3-ns ph4 ba b--black-80 bg-hover-mid-gray">
+      </div>
+    </section> -->
+  
+  </div>
+
+
+  <!-- COPYRIGHT FOOTER -->
+  <div class="bg-arss2 pt2">
+      <p class="f6 ph3 navy dib ml4 mt3 mb5 arss-navy">
+        Copyright © ARsocialstudio 2018
+      </p>
+  </div>
+
+</footer>
+
+
+
+<!-- - - - - - - END BODY - - - - - - - - - - - - - -->
+
+<!-- JQUERY JS (LOCAL) -->
+<script src="assets/js/jquery-3.2.1.min.js" ></script>
+<!-- BOOTSTRAP JS (LOCAL)  -->
+<!-- <script src="assets/js/bootstrap.min.js" ></script> -->
+<!-- BOOTSTRAP JS (REMOTE)  -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script> -->
+<!-- NATIVE JS (LOCAL) -->
+<script src="assets/js/app.js" ></script>
+</body>
+</html>
