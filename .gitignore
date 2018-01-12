@@ -5,6 +5,7 @@
 assets
 /assets
 
+.zip
 
 ### macOS ###
 *.DS_Store
